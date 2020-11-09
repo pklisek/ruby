@@ -1,0 +1,13 @@
+<div class="row">
+    <% @articles.each do |a| %>
+        <div class="col-sm-8">
+            <p>post: <%= a.title %></p>
+        </div>
+        <div class="col-sm-4">
+            <%= link_to 'Show', article_path(a) %>
+            <%= link_to 'Destroy', article_path(a),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %>
+        </div>
+    <% end %>
+</div>

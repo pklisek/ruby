@@ -1,0 +1,7 @@
+<%= form_with model: @user, local: true do |u| %>
+ <%= u.radio_button :admin, 'false', :checked => true %>
+  <%= label :admin_false, 'false' %>
+  <%=  u.radio_button :admin, 'true'%>
+  <%= label :admin_true, 'true' %>
+  <%= u.submit :admin%>
+<% end %>
